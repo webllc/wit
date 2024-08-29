@@ -1,9 +1,4 @@
-Wit.ai PHP sdk
-==============
-
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tgallice/wit-php/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tgallice/wit-php/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/tgallice/wit-php/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tgallice/wit-php/?branch=master)
-[![Build Status](https://travis-ci.org/tgallice/wit-php.svg?branch=master)](https://travis-ci.org/tgallice/wit-php)
+# Wit.ai PHP sdk
 
 This is an unofficial php sdk for [Wit.ai][1] and it's still in progress...
 
@@ -16,7 +11,7 @@ Wit.ai: Easily create text or voice based bots that humans can chat with on thei
 Via composer:
 
 ```
-$ composer require tgallice/wit-php
+$ composer require garissman/wit
 ```
 
 ## Usage:
@@ -27,7 +22,7 @@ Using the low level `Client`:
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Tgallice\Wit\Client;
+use Garissman\Wit\Client;
 
 $client = new Client('app_token');
 
@@ -46,8 +41,8 @@ You can used the `Message` api class to extract meaning of a sentence:
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Tgallice\Wit\Client;
-use Tgallice\Wit\MessageApi;
+use Garissman\Wit\Client;
+use Garissman\Wit\MessageApi;
 
 $client = new Client('app_token');
 $api = new MessageApi($client);
@@ -66,8 +61,8 @@ First, you need to create an `ActionMapping` class to customize the actions beha
 
 namespace Custom;
 
-use Tgallice\Wit\Model\Step\Action;
-use Tgallice\Wit\Model\Step\Message;
+use Garissman\Wit\Model\Step\Action;
+use Garissman\Wit\Model\Step\Message;
 
 class MyActionMapping extends ActionMapping
 {
@@ -92,15 +87,15 @@ class MyActionMapping extends ActionMapping
 
 ```
 
-And using it in the `Conversation` class. 
+And using it in the `Conversation` class.
 
 ```php
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Tgallice\Wit\Client;
-use Tgallice\Wit\ConverseApi;
-use Tgallice\Wit\Conversation;
+use Garissman\Wit\Client;
+use Garissman\Wit\ConverseApi;
+use Garissman\Wit\Conversation;
 use Custom\MyActionMapping;
 
 $client = new Client('app_token');
@@ -114,7 +109,4 @@ $context = $conversation->converse('session_id', 'Hello I live in London');
 
 `Conversation::converse()` return the last available `Context`.
 
-Some examples are describe in the [tgallice/php-wit-example][2] repository.
-
 [1]: https://wit.ai
-[2]: https://github.com/tgallice/wit-php-example
