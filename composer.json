@@ -1,13 +1,13 @@
 {
-  "name": "tgallice/wit-php",
+  "name": "garissman/wit",
   "description": "Wit.ai php sdk",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
-      "name": "Thomas Gallice",
-      "email": "tm.gallice@gmail.com",
-      "homepage": "https://github.com/tgallice"
+      "name": "Ari Morales",
+      "email": "arimoralesjordan@gmail.com",
+      "homepage": "https://github.com/garissman"
     }
   ],
   "keywords": [
@@ -19,15 +19,15 @@
   ],
   "autoload": {
     "psr-4": {
-      "Tgallice\\Wit\\": "src"
+      "Garissman\\Wit\\": "src"
     }
   },
   "require-dev": {
     "phpspec/phpspec": "~2.0"
   },
   "require": {
-    "php": ">=5.5.0",
-    "guzzlehttp/guzzle": "^6.2"
+    "php": ">=8.0",
+    "guzzlehttp/guzzle": "^7.9.0"
   },
   "extra": {
     "branch-alias": {
