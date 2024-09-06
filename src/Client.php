@@ -49,7 +49,7 @@ class Client
      */
     private $lastResponse;
 
-    public function __construct($accessToken, HttpClient $httpClient = null, $apiVersion = self::DEFAULT_API_VERSION)
+    public function __construct($accessToken, $apiVersion = self::DEFAULT_API_VERSION, HttpClient $httpClient = null)
     {
         $this->accessToken = $accessToken;
         $this->apiVersion = $apiVersion;
@@ -60,22 +60,21 @@ class Client
      * @param string $uri
      * @param array $params
      *
-     * @return ResponseInterface
+     * @return ResponseInterface|null
      */
-    public function post($uri, array $params = [])
+    public function post($uri, array $params = []): ?ResponseInterface
     {
-        return $this->send('POST', $uri, $params);
+        return $this->send('POST', $uri, $params,['v'=>$this->apiVersion]);
     }
 
     /**
      * @param string $uri
      * @param array $params
-     *
-     * @return ResponseInterface
+     * @return ResponseInterface|null
      */
-    public function get($uri, array $params = [])
+    public function get($uri, array $params = []): ?ResponseInterface
     {
-        return $this->send('GET', $uri, null, $params);
+        return $this->send('GET', $uri, null, $params,['v'=>$this->apiVersion]);
     }
 
     /**
@@ -139,12 +138,12 @@ class Client
      *
      * @return array
      */
-    private function getDefaultHeaders()
+    private function getDefaultHeaders(): array
     {
         return [
             'Authorization' => 'Bearer '.$this->accessToken,
             // Used the accept field is needed to fix the API version and avoid BC break from the API
-            'Accept' => 'application/vnd.wit.'.$this->apiVersion.'+json',
+            'Content-Type' => 'application/json',
         ];
     }
 
