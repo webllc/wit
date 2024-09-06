@@ -8,24 +8,21 @@ class MessageApi
 {
     use ResponseHandler;
 
-    /**
-     * @var Client
-     */
-    private $client;
 
-    public function __construct(Client $client)
+    public function __construct(private readonly Client $client)
     {
-        $this->client = $client;
+
     }
 
     /**
+     * https://wit.ai/docs/http/20240304/#get__message_link
      * @param string $text
      * @param Context|null $context
      * @param array $queryParams
      *
      * @return mixed
      */
-    public function extractMeaning($text, Context $context = null, array $queryParams = [])
+    public function getIntent(string $text, Context $context = null, array $queryParams = []): mixed
     {
         $query = array_merge($queryParams, [
             'q' => $text,

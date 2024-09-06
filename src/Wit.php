@@ -23,4 +23,9 @@ class Wit
         return new EntityApi($this->client);
     }
 
+    public function message(): MessageApi
+    {
+        return new MessageApi($this->client);
+    }
+
 }
