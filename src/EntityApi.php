@@ -9,22 +9,19 @@ class EntityApi
 {
     use ResponseHandler;
 
-    /**
-     * @var Client
-     */
-    private $client;
 
-    public function __construct(Client $client)
+    public function __construct(private readonly Client $client)
     {
-        $this->client = $client;
     }
 
     /**
-     * @param null|string $entityId
+     * https://wit.ai/docs/http/20240304/#get__entities_link
+     * https://wit.ai/docs/http/20240304/#get__entities__entity_link
+     * @param string|null $entityId
      *
      * @return mixed
      */
-    public function get($entityId = null)
+    public function get(string $entityId = null): mixed
     {
         if (null !== $entityId) {
             $entityId = '/'.$entityId;
@@ -133,20 +130,19 @@ class EntityApi
     }
 
     /**
-     * @param string $entityId
-     * @param EntityValue[] $entityValues
-     * @param null|string $description
+     * @param $name
+     * @param $roles
      * @param array $lookups
-     *
+     * @param array $keywords
      * @return mixed
      */
-    public function create($entityId, array $entityValues = [], $description = null, array $lookups = [Entity::LOOKUP_KEYWORDS])
+    public function create($name, $roles, array $lookups = [], array $keywords=[]): mixed
     {
         $data = [
-            'id' => $entityId,
-            'values' => $entityValues,
-            'doc' => $description,
+            'name' => $name,
+            'roles' => $roles,
             'lookups' => $lookups,
+            'keywords' => $keywords,
         ];
 
         $response = $this->client->post('/entities', $data);
