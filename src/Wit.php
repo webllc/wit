@@ -18,4 +18,9 @@ class Wit
         return new IntentApi($this->client);
     }
 
+    public function entity(): EntityApi
+    {
+        return new EntityApi($this->client);
+    }
+
 }
