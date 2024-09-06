@@ -12,7 +12,7 @@ class UtteranceApi
     /**
      * @var Client
      */
-    private $client;
+    private Client $client;
 
     public function __construct(Client $client)
     {
@@ -20,8 +20,9 @@ class UtteranceApi
     }
 
     /**
-     * @param null|string $entityId
-     *
+     * @param int $limit
+     * @param int $offset
+     * @param array $intents
      * @return mixed
      */
     public function get($limit=10,$offset=0,$intents=[])
@@ -48,7 +49,7 @@ class UtteranceApi
      *
      * @return mixed
      */
-    public function update($entityId, array $entityValues = [], $description = null, $newId = null)
+    public function update($entityId, array $entityValues = [], $description = null, $newId = null): mixed
     {
         $data = [];
 
@@ -74,7 +75,7 @@ class UtteranceApi
      *
      * @return mixed
      */
-    public function delete($entityId)
+    public function delete($entityId): mixed
     {
         $response = $this->client->delete(sprintf('/entities/%s', $entityId));
 
@@ -86,7 +87,7 @@ class UtteranceApi
      * @param string $entityValue
      * @return mixed
      */
-    public function deleteValue($entityId, $entityValue)
+    public function deleteValue($entityId, $entityValue): mixed
     {
         $response = $this->client->delete(sprintf('/entities/%s/values/%s', $entityId, $entityValue));
 
@@ -99,7 +100,7 @@ class UtteranceApi
      *
      * @return mixed
      */
-    public function addValue($entityId, EntityValue $entityValue)
+    public function addValue($entityId, EntityValue $entityValue): mixed
     {
         $response = $this->client->send('POST', sprintf('/entities/%s/values', $entityId), $entityValue);
 
@@ -113,7 +114,7 @@ class UtteranceApi
      *
      * @return mixed
      */
-    public function addExpression($entityId, $entityValue, $expression)
+    public function addExpression($entityId, $entityValue, $expression): mixed
     {
         $response = $this->client->post(sprintf('/entities/%s/values/%s/expressions', $entityId, $entityValue), [
             'expression' => $expression,
@@ -129,7 +130,7 @@ class UtteranceApi
      *
      * @return mixed
      */
-    public function deleteExpression($entityId, $entityValue, $expression)
+    public function deleteExpression($entityId, $entityValue, $expression): mixed
     {
         $response = $this->client->delete(sprintf('/entities/%s/values/%s/expressions/%s', $entityId, $entityValue, $expression));
 
@@ -137,23 +138,14 @@ class UtteranceApi
     }
 
     /**
-     * @param string $entityId
-     * @param EntityValue[] $entityValues
-     * @param null|string $description
-     * @param array $lookups
-     *
+     * https://wit.ai/docs/http/20240304/#post__utterances_link
+     * @param array $data
      * @return mixed
      */
-    public function create($entityId, array $entityValues = [], $description = null, array $lookups = [Entity::LOOKUP_KEYWORDS])
+    public function create($data): mixed
     {
-        $data = [
-            'id' => $entityId,
-            'values' => $entityValues,
-            'doc' => $description,
-            'lookups' => $lookups,
-        ];
 
-        $response = $this->client->post('/entities', $data);
+        $response = $this->client->post('/utterances', $data);
 
         return $this->decodeResponse($response);
     }
