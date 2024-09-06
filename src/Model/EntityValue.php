@@ -1,6 +1,6 @@
 <?php
 
-namespace Tgallice\Wit\Model;
+namespace Garissman\Wit\Model;
 
 class EntityValue implements \JsonSerializable
 {

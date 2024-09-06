@@ -1,6 +1,6 @@
 <?php
 
-namespace Tgallice\Wit\Exception;
+namespace Garissman\Wit\Exception;
 
 use Psr\Http\Message\ResponseInterface;
 

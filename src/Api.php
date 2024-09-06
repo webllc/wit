@@ -1,9 +1,9 @@
 <?php
 
-namespace Tgallice\Wit;
+namespace Garissman\Wit;
 
 use Psr\Http\Message\ResponseInterface;
-use Tgallice\Wit\Model\Context;
+use Garissman\Wit\Model\Context;
 
 /**
  * @deprecated This class is deprecated as of 0.1 and will be removed in 1.0.

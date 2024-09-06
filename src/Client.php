@@ -1,11 +1,11 @@
 <?php
 
-namespace Tgallice\Wit;
+namespace Garissman\Wit;
 
-use Tgallice\Wit\HttpClient\GuzzleHttpClient;
-use Tgallice\Wit\HttpClient\HttpClient;
+use Garissman\Wit\HttpClient\GuzzleHttpClient;
+use Garissman\Wit\HttpClient\HttpClient;
 use Psr\Http\Message\ResponseInterface;
-use Tgallice\Wit\Exception\BadResponseException;
+use Garissman\Wit\Exception\BadResponseException;
 
 class Client
 {

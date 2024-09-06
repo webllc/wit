@@ -1,6 +1,6 @@
 <?php
 
-namespace Tgallice\Wit;
+namespace Garissman\Wit;
 
 class Helper
 {

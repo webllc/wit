@@ -1,8 +1,8 @@
 <?php
 
-namespace Tgallice\Wit;
+namespace Garissman\Wit;
 
-use Tgallice\Wit\Model\Context;
+use Garissman\Wit\Model\Context;
 
 class ConverseApi
 {

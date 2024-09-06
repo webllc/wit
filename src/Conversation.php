@@ -1,17 +1,17 @@
 <?php
 
-namespace Tgallice\Wit;
+namespace Garissman\Wit;
 
-use Tgallice\Wit\Exception\BadResponseException;
-use Tgallice\Wit\Exception\ConversationException;
-use Tgallice\Wit\Exception\InvalidStepException;
-use Tgallice\Wit\Exception\MaxIterationException;
-use Tgallice\Wit\Model\Context;
-use Tgallice\Wit\Model\Step;
-use Tgallice\Wit\Model\Step\Action;
-use Tgallice\Wit\Model\Step\Merge;
-use Tgallice\Wit\Model\Step\Message;
-use Tgallice\Wit\Model\Step\Stop;
+use Garissman\Wit\Exception\BadResponseException;
+use Garissman\Wit\Exception\ConversationException;
+use Garissman\Wit\Exception\InvalidStepException;
+use Garissman\Wit\Exception\MaxIterationException;
+use Garissman\Wit\Model\Context;
+use Garissman\Wit\Model\Step;
+use Garissman\Wit\Model\Step\Action;
+use Garissman\Wit\Model\Step\Merge;
+use Garissman\Wit\Model\Step\Message;
+use Garissman\Wit\Model\Step\Stop;
 
 class Conversation
 {

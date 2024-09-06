@@ -3,10 +3,10 @@
  * @author Hannes Finck <finck.hannes@gmail.com>
  */
 
-namespace Tgallice\Wit\Model\Step;
+namespace Garissman\Wit\Model\Step;
 
 
-use Tgallice\Wit\Model\Step;
+use Garissman\Wit\Model\Step;
 
 abstract class AbstractStep implements Step
 {

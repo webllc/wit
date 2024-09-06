@@ -1,6 +1,6 @@
 <?php
 
-namespace Tgallice\Wit\HttpClient;
+namespace Garissman\Wit\HttpClient;
 
 use Psr\Http\Message\ResponseInterface;
 

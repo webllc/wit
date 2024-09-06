@@ -1,12 +1,12 @@
 <?php
 
-namespace Tgallice\Wit;
+namespace Garissman\Wit;
 
-use Tgallice\Wit\Model\Context;
-use Tgallice\Wit\Model\Step\Action;
-use Tgallice\Wit\Model\Step\Merge;
-use Tgallice\Wit\Model\Step\Message;
-use Tgallice\Wit\Model\Step\Stop;
+use Garissman\Wit\Model\Context;
+use Garissman\Wit\Model\Step\Action;
+use Garissman\Wit\Model\Step\Merge;
+use Garissman\Wit\Model\Step\Message;
+use Garissman\Wit\Model\Step\Stop;
 
 abstract class ActionMapping
 {

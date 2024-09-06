@@ -5,7 +5,7 @@ namespace Garissman\Wit;
 use Garissman\Wit\Model\EntityValue;
 use Garissman\Wit\Model\Entity;
 
-class EntityApi
+class UtteranceApi
 {
     use ResponseHandler;
 
@@ -24,14 +24,18 @@ class EntityApi
      *
      * @return mixed
      */
-    public function get($entityId = null)
+    public function get($limit=10,$offset=0,$intents=[])
     {
-        if (null !== $entityId) {
-            $entityId = '/'.$entityId;
-        }
-
-
-        $response = $this->client->get(sprintf('/entities%s', $entityId));
+        $response = $this->client->get(
+            '/utterance',
+            [
+                'params'=>[
+                    'limit'=>$limit,
+                    'offset'=>$offset,
+                    'intents'=>$intents
+                ]
+            ]
+        );
 
         return $this->decodeResponse($response);
     }

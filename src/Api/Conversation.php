@@ -1,13 +1,13 @@
 <?php
 
-namespace Tgallice\Wit\Api;
+namespace Garissman\Wit\Api;
 
-use Tgallice\Wit\ActionMapping;
-use Tgallice\Wit\Api;
-use Tgallice\Wit\Conversation as ConversationDelegate;
-use Tgallice\Wit\ConverseApi;
-use Tgallice\Wit\Model\Context;
-use Tgallice\Wit\Model\Step;
+use Garissman\Wit\ActionMapping;
+use Garissman\Wit\Api;
+use Garissman\Wit\Conversation as ConversationDelegate;
+use Garissman\Wit\ConverseApi;
+use Garissman\Wit\Model\Context;
+use Garissman\Wit\Model\Step;
 
 /**
  * @deprecated This class is deprecated as of 0.1 and will be removed in 1.0.

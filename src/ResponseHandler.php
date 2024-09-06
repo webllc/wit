@@ -1,6 +1,6 @@
 <?php
 
-namespace Tgallice\Wit;
+namespace Garissman\Wit;
 
 use Psr\Http\Message\ResponseInterface;
 

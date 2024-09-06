@@ -1,8 +1,8 @@
 <?php
 
-namespace Tgallice\Wit\Exception;
+namespace Garissman\Wit\Exception;
 
-use Tgallice\Wit\Model\Context;
+use Garissman\Wit\Model\Context;
 
 class ConversationException extends \RuntimeException
 {
