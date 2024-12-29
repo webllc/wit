@@ -1,8 +1,8 @@
 <?php
 
-namespace Garissman\Wit\Exception;
+namespace Webllc\Wit\Exception;
 
-use Garissman\Wit\Model\Context;
+use Webllc\Wit\Model\Context;
 
 class ConversationException extends \RuntimeException
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Garissman\Wit;
+namespace Webllc\Wit;
 
 use Psr\Http\Message\ResponseInterface;
 

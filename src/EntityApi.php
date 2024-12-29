@@ -1,9 +1,9 @@
 <?php
 
-namespace Garissman\Wit;
+namespace Webllc\Wit;
 
-use Garissman\Wit\Model\EntityValue;
-use Garissman\Wit\Model\Entity;
+use Webllc\Wit\Model\EntityValue;
+use Webllc\Wit\Model\Entity;
 
 class EntityApi
 {

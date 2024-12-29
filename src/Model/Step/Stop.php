@@ -1,8 +1,8 @@
 <?php
 
-namespace Garissman\Wit\Model\Step;
+namespace Webllc\Wit\Model\Step;
 
-use Garissman\Wit\Model\Step;
+use Webllc\Wit\Model\Step;
 
 class Stop extends AbstractStep
 {

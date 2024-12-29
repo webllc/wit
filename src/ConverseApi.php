@@ -1,8 +1,8 @@
 <?php
 
-namespace Garissman\Wit;
+namespace Webllc\Wit;
 
-use Garissman\Wit\Model\Context;
+use Webllc\Wit\Model\Context;
 
 class ConverseApi
 {

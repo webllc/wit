@@ -1,6 +1,6 @@
 <?php
 
-namespace Garissman\Wit\Exception;
+namespace Webllc\Wit\Exception;
 
 class InvalidStepException extends \RuntimeException
 {

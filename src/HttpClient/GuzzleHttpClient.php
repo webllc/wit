@@ -1,11 +1,11 @@
 <?php
 
-namespace Garissman\Wit\HttpClient;
+namespace Webllc\Wit\HttpClient;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\RequestOptions;
-use Garissman\Wit\Client;
+use Webllc\Wit\Client;
 
 class GuzzleHttpClient implements HttpClient
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace Garissman\Wit;
+namespace Webllc\Wit;
 
-use Garissman\Wit\Exception\InvalidStepException;
-use Garissman\Wit\Model\Step;
-use Garissman\Wit\Model\Step\Action;
-use Garissman\Wit\Model\Step\Merge;
-use Garissman\Wit\Model\Step\Message;
-use Garissman\Wit\Model\Step\Stop;
+use Webllc\Wit\Exception\InvalidStepException;
+use Webllc\Wit\Model\Step;
+use Webllc\Wit\Model\Step\Action;
+use Webllc\Wit\Model\Step\Merge;
+use Webllc\Wit\Model\Step\Message;
+use Webllc\Wit\Model\Step\Stop;
 
 class StepFactory
 {

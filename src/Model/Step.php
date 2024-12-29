@@ -1,6 +1,6 @@
 <?php
 
-namespace Garissman\Wit\Model;
+namespace Webllc\Wit\Model;
 
 
 interface Step

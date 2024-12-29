@@ -19,7 +19,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Garissman\\Wit\\": "src"
+      "Webllc\\Wit\\": "src"
     }
   },
   "require-dev": {

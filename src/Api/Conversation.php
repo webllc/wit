@@ -1,13 +1,13 @@
 <?php
 
-namespace Garissman\Wit\Api;
+namespace Webllc\Wit\Api;
 
-use Garissman\Wit\ActionMapping;
-use Garissman\Wit\Api;
-use Garissman\Wit\Conversation as ConversationDelegate;
-use Garissman\Wit\ConverseApi;
-use Garissman\Wit\Model\Context;
-use Garissman\Wit\Model\Step;
+use Webllc\Wit\ActionMapping;
+use Webllc\Wit\Api;
+use Webllc\Wit\Conversation as ConversationDelegate;
+use Webllc\Wit\ConverseApi;
+use Webllc\Wit\Model\Context;
+use Webllc\Wit\Model\Step;
 
 /**
  * @deprecated This class is deprecated as of 0.1 and will be removed in 1.0.

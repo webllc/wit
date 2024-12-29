@@ -11,7 +11,7 @@ Wit.ai: Easily create text or voice based bots that humans can chat with on thei
 Via composer:
 
 ```
-$ composer require garissman/wit
+$ composer require webllc/wit
 ```
 
 ## Usage:
@@ -22,7 +22,7 @@ Using the low level `Client`:
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Garissman\Wit\Client;
+use Webllc\Wit\Client;
 
 $client = new Client('app_token');
 
@@ -41,8 +41,8 @@ You can used the `Message` api class to extract meaning of a sentence:
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Garissman\Wit\Client;
-use Garissman\Wit\MessageApi;
+use Webllc\Wit\Client;
+use Webllc\Wit\MessageApi;
 
 $client = new Client('app_token');
 $api = new MessageApi($client);
@@ -61,8 +61,8 @@ First, you need to create an `ActionMapping` class to customize the actions beha
 
 namespace Custom;
 
-use Garissman\Wit\Model\Step\Action;
-use Garissman\Wit\Model\Step\Message;
+use Webllc\Wit\Model\Step\Action;
+use Webllc\Wit\Model\Step\Message;
 
 class MyActionMapping extends ActionMapping
 {
@@ -93,9 +93,9 @@ And using it in the `Conversation` class.
 
 require_once __DIR__.'/vendor/autoload.php';
 
-use Garissman\Wit\Client;
-use Garissman\Wit\ConverseApi;
-use Garissman\Wit\Conversation;
+use Webllc\Wit\Client;
+use Webllc\Wit\ConverseApi;
+use Webllc\Wit\Conversation;
 use Custom\MyActionMapping;
 
 $client = new Client('app_token');

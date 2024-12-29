@@ -1,6 +1,6 @@
 <?php
 
-namespace Garissman\Wit;
+namespace Webllc\Wit;
 
 class Helper
 {

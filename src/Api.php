@@ -1,9 +1,9 @@
 <?php
 
-namespace Garissman\Wit;
+namespace Webllc\Wit;
 
 use Psr\Http\Message\ResponseInterface;
-use Garissman\Wit\Model\Context;
+use Webllc\Wit\Model\Context;
 
 /**
  * @deprecated This class is deprecated as of 0.1 and will be removed in 1.0.

@@ -1,5 +1,5 @@
 <?php
 
-namespace Garissman\Wit\Exception;
+namespace Webllc\Wit\Exception;
 
 class MaxIterationException extends \RuntimeException {}
