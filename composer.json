@@ -1,13 +1,13 @@
 {
-  "name": "garissman/wit",
+  "name": "webllc/wit",
   "description": "Wit.ai php sdk",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
-      "name": "Ari Morales",
-      "email": "arimoralesjordan@gmail.com",
-      "homepage": "https://github.com/garissman"
+      "name": "Denis Didenko",
+      "email": "d.didenko05@gmail.com",
+      "homepage": "https://github.com/webllc"
     }
   ],
   "keywords": [
@@ -26,8 +26,8 @@
     "phpspec/phpspec": "~2.0"
   },
   "require": {
-    "php": ">=8.0",
-    "guzzlehttp/guzzle": "^7.9.0"
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "^7.2.0"
   },
   "extra": {
     "branch-alias": {
